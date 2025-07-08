@@ -3,6 +3,7 @@
   src: url('/fonts/Virgil.woff2') format('woff2');
   font-display: swap;
 }
+
 @plugin '@tailwindcss/typography';
 
 @layer base {
@@ -31,6 +32,13 @@
     table,
     code {
       @apply text-foreground;
+    }
+
+    p,
+    a,
+    ul,
+    li {
+      font-family: 'Source Sans 3', sans-serif;
     }
 
     a {
