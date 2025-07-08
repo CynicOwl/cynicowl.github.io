@@ -3,7 +3,7 @@ export const SITE = {
   author: "eunsang",
   profile: "https://github.com/CynicOwl",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  title: "🧑🏻‍💻 CynicDog | 📍 Seoul",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
