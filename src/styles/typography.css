@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Virgil';
+  src: url('/fonts/Virgil.woff2') format('woff2');
+  font-display: swap;
+}
 @plugin '@tailwindcss/typography';
 
 @layer base {
@@ -11,6 +16,7 @@
     h4,
     th {
       @apply mb-3 text-foreground;
+      font-family: 'Virgil', sans-serif;
     }
 
     h3 {
