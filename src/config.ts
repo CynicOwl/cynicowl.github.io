@@ -12,9 +12,9 @@ export const SITE = {
   showArchives: true,
   showBackButton: true, 
   editPost: {
-    enabled: true,
-    text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+    enabled: false,
+    text: "Edit",
+    url: "",
   },
   dynamicOgImage: true,
   dir: "ltr", 
