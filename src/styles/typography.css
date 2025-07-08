@@ -16,6 +16,7 @@
     h4,
     th {
       @apply mb-3 text-foreground;
+      font-family: 'Virgil', sans-serif;
     }
 
     h3 {
@@ -30,10 +31,6 @@
     table,
     code {
       @apply text-foreground;
-    }
-
-    p {
-      font-family: 'Virgil', sans-serif;
     }
 
     a {
