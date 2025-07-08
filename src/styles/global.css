@@ -39,7 +39,7 @@ html[data-theme="dark"] {
   }
   body {
     @apply flex min-h-svh flex-col bg-background text-foreground selection:bg-accent/75 selection:text-background;
-    font-family: 'Virgil', sans-serif;
+    font-family: "EB Garamond", serif;
   }
   a,
   button {
