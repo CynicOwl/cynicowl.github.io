@@ -1,20 +1,26 @@
 ---
-title: My First MDX Post with Excalidraw SVG
+title: Drawing Conclusions (Literally) with Excalidraw at Work
 author: eunsang
 pubDatetime: 2025-07-07T21:19:00Z
 modDatetime: 2025-07-08T21:19:00Z
-slug: my-first-mdx-post-with-excalidraw-svg
+slug: drawing-conclusions-excalidraw-work
 featured: false
 draft: false
 tags: [excalidraw]
-description: A quick experiment embedding an Excalidraw SVG into an MDX post using Astro.
+description: How I literally drew conclusions at work using Excalidraw — a fun and practical visual tool.
 ---
 
 import ExcalidrawSVG from '../../components/ExcalidrawSVG.astro';
-import myDiagram from '../../assets/Untitled-2025-07-09-2119.svg';
+import pseudonymizationBusinessFlow from '../../assets/pseudonymization_business_flow.svg';
+
+const pseudonymizationBusinessFlowText = "Pseudonymization business flow diagram";
+
+> Visualizing complex workflows is key to understanding and communicating how things really work.
+> Recently, I used Excalidraw to sketch out the entire pseudonymization business flow at work — turning abstract tasks into a clear, interconnected diagram. This simple yet powerful tool helped me literally draw conclusions and make the process more transparent for the whole team.
+> Let me show you how it all came together.
 
 <ExcalidrawSVG
-  src={myDiagram}
-  alt="Business flow diagram"
-  caption="Business flow diagram"
+  src={pseudonymizationBusinessFlow}
+  alt={pseudonymizationBusinessFlowText}
+  caption={pseudonymizationBusinessFlowText}
 />
