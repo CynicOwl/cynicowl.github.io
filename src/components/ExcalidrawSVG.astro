@@ -12,15 +12,15 @@ const { src, alt, caption } = Astro.props;
 const svgUrl = typeof src === 'string' ? src : src.src;
 ---
 
-<figure class="excalidraw-figure">
-  <div class="excalidraw-svg" data-svg-url={svgUrl} aria-label={alt}>
+<figure class="w-full max-w-full overflow-hidden my-8">
+  <div class="excalidraw-svg w-full max-w-full overflow-hidden" data-svg-url={svgUrl} aria-label={alt}>
     <img src={svgUrl} alt={alt} style="display: none;" />
   </div>
-  {caption && <figcaption>{caption}</figcaption>}
+  {caption && <figcaption class="text-center mt-4 text-sm text-skin-base italic">{caption}</figcaption>}
 </figure>
 
 <script>
-  function modifySvg(svgString: string): string {
+  function modifySvg(svgString) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgString, 'image/svg+xml');
     const svg = doc.documentElement;
@@ -52,7 +52,7 @@ const svgUrl = typeof src === 'string' ? src : src.src;
   }
 
   function initExcalidrawSVG() {
-    const svgContainers = document.querySelectorAll<HTMLElement>('.excalidraw-svg');
+    const svgContainers = document.querySelectorAll('.excalidraw-svg');
     svgContainers.forEach(async (container) => {
       const svgUrl = container.dataset.svgUrl;
       if (svgUrl) {
@@ -74,39 +74,43 @@ const svgUrl = typeof src === 'string' ? src : src.src;
     });
   }
 
-  // Run on initial page load
   document.addEventListener('DOMContentLoaded', initExcalidrawSVG);
-
-  // Run on subsequent navigation
   document.addEventListener('astro:page-load', initExcalidrawSVG);
 </script>
 
 <style>
-  .excalidraw-figure {
-    @apply w-full max-w-full overflow-hidden my-8;
-  }
-  .excalidraw-svg {
-    @apply w-full max-w-full overflow-hidden;
-  }
   :global(.excalidraw-svg svg) {
-    @apply w-full h-auto;
+    width: 100%;
+    height: auto;
   }
   :global(.excalidraw-svg .fill-skin-base) {
-    @apply fill-[rgb(34,46,54)] dark:fill-[rgb(175,176,177)];
+    fill: rgb(34, 46, 54);
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(.excalidraw-svg .fill-skin-base) {
+      fill: rgb(175, 176, 177);
+    }
   }
   :global(.excalidraw-svg .fill-skin-soft) {
-    @apply fill-[rgb(234,206,219)] dark:fill-[rgb(40,39,40)];
+    fill: rgb(234, 206, 219);
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(.excalidraw-svg .fill-skin-soft) {
+      fill: rgb(40, 39, 40);
+    }
   }
   :global(.excalidraw-svg .stroke-skin-accent) {
-    @apply stroke-[rgb(211,0,106)] dark:stroke-[rgb(199,54,47)];
+    stroke: rgb(211, 0, 106);
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(.excalidraw-svg .stroke-skin-accent) {
+      stroke: rgb(199, 54, 47);
+    }
   }
   :global(.excalidraw-svg .excalidraw-element) {
-    @apply transition-all duration-300;
+    transition: all 0.3s ease-in-out;
   }
   :global(.excalidraw-svg .excalidraw-element:hover) {
-    @apply opacity-80;
-  }
-  figcaption {
-    @apply text-center mt-4 text-sm text-skin-base italic;
+    opacity: 0.8;
   }
 </style>
