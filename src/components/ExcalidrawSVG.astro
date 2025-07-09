@@ -19,8 +19,8 @@ const svgUrl = typeof src === 'string' ? src : src.src;
   {caption && <figcaption class="text-center mt-4 text-sm text-skin-base italic">{caption}</figcaption>}
 </figure>
 
-<script>
-  function modifySvg(svgString) {
+<script type="ts">
+  function modifySvg(svgString: string): string {
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgString, 'image/svg+xml');
     const svg = doc.documentElement;
@@ -52,7 +52,7 @@ const svgUrl = typeof src === 'string' ? src : src.src;
   }
 
   function initExcalidrawSVG() {
-    const svgContainers = document.querySelectorAll('.excalidraw-svg');
+    const svgContainers = document.querySelectorAll<HTMLElement>('.excalidraw-svg');
     svgContainers.forEach(async (container) => {
       const svgUrl = container.dataset.svgUrl;
       if (svgUrl) {
