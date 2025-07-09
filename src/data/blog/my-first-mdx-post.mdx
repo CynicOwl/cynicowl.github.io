@@ -7,12 +7,15 @@ slug: my-first-mdx-post-with-excalidraw-svg
 featured: false
 draft: false
 tags: []
-description: >
-  A quick experiment embedding an Excalidraw SVG into an MDX post using Astro. Demonstrates how to use custom components for visual storytelling.
+description: A quick experiment embedding an Excalidraw SVG into an MDX post using Astro.
 ---
 
 import ExcalidrawSVG from '../../components/ExcalidrawSVG.astro';
 import myDiagram from '../../assets/Untitled-2025-07-09-2119.svg';
+
+export const { title } = frontmatter;
+
+# {title}
 
 <ExcalidrawSVG
   src={myDiagram}

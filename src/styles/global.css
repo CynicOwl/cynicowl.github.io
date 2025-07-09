@@ -15,9 +15,9 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --background: #1b1b1e;
   --foreground: #afb0b1;
-  --accent: #C7362F;
+  --accent: #006cac;
   --muted: #343f60bf;
-  --border: #8F2323;
+  --border: #ece9e9;
 }
 
 @theme inline {
