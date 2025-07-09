@@ -1,12 +1,12 @@
 ---
 title: Learning CLI and SDK in DevOps - Reflections from my first production experience
-author: Your Name
+author: eunsang
 pubDatetime: 2025-06-12T12:46:01Z
 modDatetime: 2025-07-08T00:00:00Z
 slug: learning-cli-and-sdk-in-devops-reflections-from-real-work
 featured: false
 draft: false
-tags: []
+tags: [mlops, devops]
 description: >
   In this article, we’ll explore key considerations when choosing between CLI and SDK tools in real-world DevOps pipelines.
   These are the lessons and best practices from recent MLOps production experience, focusing on automation, deployment, and maintainability.
